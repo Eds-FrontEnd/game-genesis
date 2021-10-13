@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --blue: rgb(6, 6, 241);
+  --red: rgb(255, 0, 0);
+  --green: rgb(0, 128, 0);
+  --yellow: rgb(255, 255, 0);
+  --black: black;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+}
+.main-game {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.genius {
+  width: 250px;
+  height: 250px;
+  display: grid;
+  grid-template-areas: "verde vermelho " "amarelo azul";
+  grid-gap: 35px;
+  border: 1px solid var(--black);
+  background-color: var(--black);
+  border-radius: 100%;
+  width: 700px;
+  height: 700px;
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  background-color: var(--black);
+  color: var(--white);
+  position: absolute;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  z-index: 10;
+}
+.start {
+  width: 70%;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--black);
+  color: var(--white);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.azul {
+  grid-area: azul;
+  background-color: var(--blue);
+  border-bottom-right-radius: 100%;
+  cursor: pointer;
+}
+.vermelho {
+  grid-area: vermelho;
+  background-color: var(--red);
+  border-top-right-radius: 100%;
+  cursor: pointer;
+}
+.amarelo {
+  grid-area: amarelo;
+  background-color: var(--yellow);
+  border-bottom-left-radius: 100%;
+  cursor: pointer;
+}
+.verde {
+  grid-area: verde;
+  background-color: var(--green);
+  border-top-left-radius: 100%;
+  cursor: pointer;
+}
+.selected {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px){
+    .genius{
+        min-width: 768px;
+        min-height: 768px;
+    }
+}
+@media screen and (max-width: 425px){
+    .genius{
+        width: 50vw;
+        height: 50vh;
+    }
+    .circle{
+        width: 160px;
+        height: 160px;
+    }
+    .start{
+        width: 80px;
+        height: 80px;
+ 
+    }
+}
