@@ -25,20 +25,18 @@ body {
   align-items: center;
 }
 .genius {
-  width: 250px;
-  height: 250px;
+  width: 510px;
+  height: 510px;
   display: grid;
   grid-template-areas: "verde vermelho " "amarelo azul";
   grid-gap: 35px;
   border: 1px solid var(--black);
   background-color: var(--black);
   border-radius: 100%;
-  width: 700px;
-  height: 700px;
 }
 .circle {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background-color: var(--black);
   color: var(--white);
   position: absolute;
@@ -86,24 +84,33 @@ body {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 768px){
-    .genius{
-        min-width: 768px;
-        min-height: 768px;
-    }
+@media screen and (max-width: 520px) {
+  .genius {
+    width: 400px;
+    height: 400px;
+  }
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
 }
-@media screen and (max-width: 425px){
-    .genius{
-        width: 50vw;
-        height: 50vh;
-    }
-    .circle{
-        width: 160px;
-        height: 160px;
-    }
-    .start{
-        width: 80px;
-        height: 80px;
- 
-    }
+@media screen and (max-width: 430px) {
+  .genius {
+    width: 320px;
+    height: 320px;
+  }
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .genius {
+    min-width: 300px;
+    min-height: 300px;
+  }
+  .circle {
+    min-width: 110px;
+    min-height: 110px;
+  }
 }
