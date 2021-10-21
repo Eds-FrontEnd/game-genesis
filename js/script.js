@@ -93,7 +93,7 @@ let gameOver = () => {
 
 // Iniciando novo jogo
 let playGame = () => {
-  alert("Bem-vindo ao Gênesis! \n Inicinado novo jogo...");
+  alert("Bem-vindo ao Gênesis! \n Iniciando novo jogo...");
   score = 0;
 
   nextLevel();
